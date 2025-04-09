@@ -40,6 +40,10 @@ public class Sound
   public void trimSilenceFromBeginning()
   {
     /* to be implemented in part (b) */
+    ArrayList <Integer> a = new ArrayList<Integer>();
+    for(int i:samples)
+      a.add(i);
+    
     int count = 0;
     for(int i = 0; i < samples.length; i++){
       if(samples[i] == 0){
@@ -51,7 +55,7 @@ public class Sound
     }
     int [] newSamples = new int[count];
       for(int j = count; j > 0; j--){
-        samples.remove(j);
+        a.remove(j);
       }
   }
 }
